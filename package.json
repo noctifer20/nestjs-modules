@@ -2,7 +2,9 @@
   "name": "nestjs-libs",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "prepare": "husky install"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^8.0.0",
@@ -13,6 +15,8 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
     "@nrwl/cli": "14.1.9",
@@ -27,6 +31,7 @@
     "@typescript-eslint/parser": "~5.18.0",
     "eslint": "~8.12.0",
     "eslint-config-prettier": "8.1.0",
+    "husky": "^8.0.0",
     "jest": "27.5.1",
     "nx": "14.1.9",
     "prettier": "^2.5.1",
