@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "nestjs-alchemy": ["packages/nestjs-alchemy/src/index.ts"]
+      "nestjs-alchemy": ["packages/nestjs-alchemy/src/index.ts"],
+      "nestjs-api-football": ["packages/nestjs-api-football/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
