@@ -847,6 +847,17 @@
     semver "7.3.4"
     tslib "^2.3.0"
 
+"@nrwl/devkit@14.4.2":
+  version "14.4.2"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-14.4.2.tgz#184b627ef16a7ad71babcb74479da73a44f2f0c8"
+  integrity sha512-CJCczAbnZ7w6XZeOMHhb4aTQeDzU0pJOAAJvNU1EAzbj/nkP+QILn/sX+WQR6z94UT2Y9SMamnE4TjQC2F48vQ==
+  dependencies:
+    ejs "^3.1.7"
+    ignore "^5.0.4"
+    rxjs "^6.5.4"
+    semver "7.3.4"
+    tslib "^2.3.0"
+
 "@nrwl/eslint-plugin-nx@14.1.9":
   version "14.1.9"
   resolved "https://registry.yarnpkg.com/@nrwl/eslint-plugin-nx/-/eslint-plugin-nx-14.1.9.tgz#b8be27ea6acf5f9d676aff6f6c63f64fb7988881"
@@ -4708,6 +4719,13 @@ neo-async@^2.6.0, neo-async@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+
+ngx-deploy-npm@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/ngx-deploy-npm/-/ngx-deploy-npm-4.1.1.tgz#f8b68299cc393ff575aa3f2f3d98fb0e7bf963cc"
+  integrity sha512-XjZubxz9gnPmke9lJP7cO3z1y7zBl/Joi+mBHE5MG8jWpgdSLoPN0ArMtAIkDdj7CO0s81ZMUs3z2ZaPPK5b6g==
+  dependencies:
+    "@nrwl/devkit" "14.4.2"
 
 node-addon-api@^3.2.1:
   version "3.2.1"

@@ -50,14 +50,6 @@ jobs:
           yarn nx affected:build --prod --base=$base
       - name: Version
         run: |
-          yarn nx affected:libs --base=$base --target=version &&
-          git push --tags &&
-          for LIBRARY in $(yarn nx affected:libs --base=$base --plain | awk 'NR > 2 && $1 != "Done" { print $1 }')
-          do
-            cd ./dist/packages/$LIBRARY
-            npm publish --registry https://npm.pkg.github.com --no-git-tag-version --no-push --yes
-            cd ..
-            cd ..
-          done
+          yarn nx affected:libs --base=$base --target=version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
