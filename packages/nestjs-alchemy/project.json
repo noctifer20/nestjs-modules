@@ -34,7 +34,9 @@
       "options": {
         "preset": "conventional",
         "postTargets": ["nestjs-alchemy:publish", "nestjs-alchemy:github"],
-        "commitMessageFormat": "release: bump ${projectName} to ${version} [skip ci]"
+        "commitMessageFormat": "release: bump ${projectName} to ${version} [skip ci]",
+        "push": true,
+        "noVerify": true
       },
       "dependsOn": [
         {
