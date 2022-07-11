@@ -1,5 +1,6 @@
 {
   "name": "nestjs-alchemy",
   "version": "0.1.2",
-  "type": "commonjs"
+  "type": "commonjs",
+  "author": "noctifer20"
 }
