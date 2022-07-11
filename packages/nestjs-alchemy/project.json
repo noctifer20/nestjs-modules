@@ -34,7 +34,13 @@
       "options": {
         "preset": "conventional",
         "postTargets": ["nestjs-alchemy:publish", "nestjs-alchemy:github"]
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     },
     "github": {
       "executor": "@jscutlery/semver:github",

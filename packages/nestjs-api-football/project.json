@@ -34,7 +34,13 @@
       "options": {
         "preset": "conventional",
         "postTargets": ["nestjs-api-football:publish", "nestjs-api-football:github"]
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     },
     "github": {
       "executor": "@jscutlery/semver:github",
@@ -47,13 +53,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "options": {
         "command": "node tools/scripts/publish.mjs nestjs-api-football ${version} ${tag}"
-      },
-      "dependsOn": [
-        {
-          "projects": "self",
-          "target": "build"
-        }
-      ]
+      }
     }
   },
   "tags": []
