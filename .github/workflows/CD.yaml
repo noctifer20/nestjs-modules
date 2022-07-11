@@ -56,3 +56,4 @@ jobs:
           yarn nx affected --parallel=1 --base=$base --target=version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
