@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/noctifer20/nestjs-modules/compare/nestjs-alchemy-0.1.2...nestjs-alchemy-0.2.0) (2022-07-11)
+
+
+### Features
+
+* publish to npm ([38d2481](https://github.com/noctifer20/nestjs-modules/commit/38d248152d6b2733ad0def3a3d771bface3f449a))
+
+
+### Bug Fixes
+
+* force publish ([7dae45b](https://github.com/noctifer20/nestjs-modules/commit/7dae45b1f1691b41bf4758a8aac623156f6b27ec))
+* force publish ([575fe1a](https://github.com/noctifer20/nestjs-modules/commit/575fe1a1eeb7b4af258b07da86bcb0b4c8b0cbfb))
+* force publish ([0edbc94](https://github.com/noctifer20/nestjs-modules/commit/0edbc940ef69ed0349f0260f647b2e1aa6ef165d))
+* force publish ([28bc338](https://github.com/noctifer20/nestjs-modules/commit/28bc338f8f053c547825a1bb94a3de41ab4a28c2))
+* force publish ([17b9950](https://github.com/noctifer20/nestjs-modules/commit/17b99503c9c9478abbb2a510b3baa4e0f1a21ca1))
+
 ### [0.2.4](https://github.com/noctifer20/nestjs-modules/compare/nestjs-alchemy-0.2.3...nestjs-alchemy-0.2.4) (2022-07-11)
 
 
