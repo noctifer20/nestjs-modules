@@ -52,7 +52,7 @@ jobs:
         run: |
           git config --global user.name "noctifer20" &&
           git config --global user.email "ohanjanyan.miqayel@gmail.com" &&
-          echo //npm.pkg.github.com/:_authToken=$GITHUB_TOKEN >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
           yarn nx affected --parallel=1 --base=$base --target=version
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
