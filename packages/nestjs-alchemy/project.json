@@ -56,7 +56,7 @@
     "publish": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "node tools/scripts/publish.mjs nestjs-api-football ${version} ${tag}"
+        "command": "node tools/scripts/publish.mjs nestjs-alchemy ${version} ${tag}"
       },
       "dependsOn": [
         {
