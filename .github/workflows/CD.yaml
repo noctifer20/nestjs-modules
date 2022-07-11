@@ -1,9 +1,11 @@
+name: Publish
+
 on:
   push:
     branches:
       - master
 jobs:
-  build-test:
+  publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,12 +45,14 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
 
+      - name: Build libraries
+        run: |
+          yarn nx affected:build --prod --base=$base
       - name: Version
         run: |
           yarn nx affected:libs --base=$base --target=version &&
           git push --tags &&
-          yarn nx affected:lins --base=$base --target=publish &&
-          for LIBRARY in $(yarn nx affected:libs --base=$last_version --head=$current_version --plain | awk 'NR > 2 && $1 != "Done" { print $1 }')
+          for LIBRARY in $(yarn nx affected:libs --base=$base --plain | awk 'NR > 2 && $1 != "Done" { print $1 }')
           do
             cd ./dist/packages/$LIBRARY
             npm publish --registry https://npm.pkg.github.com --no-git-tag-version --no-push --yes
