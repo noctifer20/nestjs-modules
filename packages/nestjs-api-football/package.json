@@ -2,5 +2,8 @@
   "name": "nestjs-api-football",
   "version": "0.1.2",
   "type": "commonjs",
-  "author": "noctifer20"
+  "author": "noctifer20",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }
