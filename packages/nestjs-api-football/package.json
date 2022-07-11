@@ -3,9 +3,6 @@
   "version": "0.1.2",
   "type": "commonjs",
   "author": "noctifer20",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/noctifer20"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/noctifer20/nestjs-modules.git"

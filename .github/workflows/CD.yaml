@@ -45,12 +45,28 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install
 
-      - name: Version
+      - name: Configure Git
         run: |
           git config --global user.name "noctifer20" &&
-          git config --global user.email "ohanjanyan.miqayel@gmail.com" &&
-          echo "//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > ~/.npmrc
+          git config --global user.email "ohanjanyan.miqayel@gmail.com"
+
+      - name: Publish (GitHub Pakcages)
+        run: |
+          echo "registry=https://registry.npmjs.org/ \
+          always-auth=true \
+          //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN \
+          " > ~/.npmrc &&
           yarn nx affected --parallel=1 --base=$base --target=version
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish (NPM)
+        run: |
+          echo "registry=https://registry.npmjs.org/ \
+          always-auth=true \
+          //npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN \
+          " > ~/.npmrc
+          yarn nx affected --parallel=1 --base=$base --target=publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
