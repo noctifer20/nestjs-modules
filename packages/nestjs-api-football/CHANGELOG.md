@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.2.5](https://github.com/noctifer20/nestjs-modules/compare/nestjs-api-football-0.2.4...nestjs-api-football-0.2.5) (2022-07-11)
+
+
+### Bug Fixes
+
+* force publish ([d67777f](https://github.com/noctifer20/nestjs-modules/commit/d67777fc7ed156001a04dec378add0011fc8457d))
+
 ### [0.2.4](https://github.com/noctifer20/nestjs-modules/compare/nestjs-api-football-0.2.3...nestjs-api-football-0.2.4) (2022-07-11)
 
 
