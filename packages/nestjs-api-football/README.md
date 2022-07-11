@@ -11,5 +11,3 @@ Run `nx build nestjs-api-football` to build the library.
 Run `nx test nestjs-api-football` to execute the unit tests via [Jest](https://jestjs.io).
 
 
-
-
