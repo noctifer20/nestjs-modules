@@ -51,12 +51,12 @@ jobs:
         run: |
           git config --global user.name "noctifer20" &&
           git config --global user.email "ohanjanyan.miqayel@gmail.com"
-
-      - name: Publish (GitHub Pakcages)
-        run: yarn nx affected --parallel=1 --base=$base --target=version
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#
+#      - name: Publish (GitHub Packages)
+#        run: yarn nx affected --parallel=1 --base=$base --target=version
+#        env:
+#          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup NodeJS 16
         uses: actions/setup-node@v1
