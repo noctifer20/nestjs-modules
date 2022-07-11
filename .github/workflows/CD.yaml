@@ -50,6 +50,6 @@ jobs:
           yarn nx affected:build --prod --base=$base
       - name: Version
         run: |
-          yarn nx affected --base=$base --target=version
+          yarn nx affected --parallel=1 --base=$base --target=version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
