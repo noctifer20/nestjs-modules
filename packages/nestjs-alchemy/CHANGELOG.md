@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+### [0.2.7](https://github.com/noctifer20/nestjs-modules/compare/nestjs-alchemy-0.2.6...nestjs-alchemy-0.2.7) (2022-07-11)
+
+
+### Bug Fixes
+
+* force publish ([9cad066](https://github.com/noctifer20/nestjs-modules/commit/9cad066c38027241802ced3363b4baf1447f4573))
+
 ### [0.2.6](https://github.com/noctifer20/nestjs-modules/compare/nestjs-alchemy-0.2.5...nestjs-alchemy-0.2.6) (2022-07-11)
 
 
