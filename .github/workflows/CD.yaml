@@ -22,7 +22,9 @@ jobs:
       - name: Setup NodeJS 16
         uses: actions/setup-node@v1
         with:
+          registry-url: 'https://npm.pkg.github.com'
           node-version: 16
+          scope: '@noctifer20'
 
       - name: Install yarn
         run: npm install -g yarn
@@ -51,18 +53,22 @@ jobs:
           git config --global user.email "ohanjanyan.miqayel@gmail.com"
 
       - name: Publish (GitHub Pakcages)
-        run: |
-          echo "registry=https://npm.pkg.github.com/noctifer20\nalways-auth=true\n//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > .npmrc &&
-          yarn nx affected --parallel=1 --base=$base --target=version
+        run: yarn nx affected --parallel=1 --base=$base --target=version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup NodeJS 16
+        uses: actions/setup-node@v1
+        with:
+          registry-url: 'https://registry.npmjs.org'
+          node-version: 16
+
       - name: Publish (NPM)
-        run: |
-          echo "registry=https://registry.npmjs.org/\nalways-auth=true\n//npm.pkg.github.com/:_authToken=$NODE_AUTH_TOKEN" > .npmrc &&
-          yarn nx affected --parallel=1 --base=$base --target=publish
+        run: yarn nx affected --parallel=1 --base=$base --target=publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Tag last-release
         run: |
           git tag -f last-release
