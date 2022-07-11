@@ -65,7 +65,7 @@ jobs:
           node-version: 16
 
       - name: Publish (NPM)
-        run: yarn nx affected --parallel=1 --base=$base --target=version
+        run: yarn nx affected --parallel=1 --base=$base --target=version --args="--dryRun"
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
