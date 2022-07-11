@@ -50,6 +50,8 @@ jobs:
           yarn nx affected:build --prod --base=$base
       - name: Version
         run: |
+          git config --global user.name "noctifer20" &&
+          git config --global user.email "ohanjanyan.miqayel@gmail.com" &&
           yarn nx affected --parallel=1 --base=$base --target=version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
