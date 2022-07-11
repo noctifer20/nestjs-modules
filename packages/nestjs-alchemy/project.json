@@ -44,10 +44,16 @@
       }
     },
     "publish": {
-      "executor": "ngx-deploy-npm:deploy",
+      "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "access": "public"
-      }
+        "command": "node tools/scripts/publish.mjs nestjs-api-football ${version} ${tag}"
+      },
+      "dependsOn": [
+        {
+          "projects": "self",
+          "target": "build"
+        }
+      ]
     }
   },
   "tags": []
