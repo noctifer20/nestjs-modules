@@ -6,5 +6,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/noctifer20/nestjs-modules.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
