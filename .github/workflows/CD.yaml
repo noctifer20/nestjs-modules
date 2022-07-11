@@ -52,7 +52,7 @@ jobs:
           git config --global user.email "ohanjanyan.miqayel@gmail.com"
 
       - name: Publish (NPM)
-        run: yarn nx affected --parallel=1 --base=$base --target=version --args="--dryRun"
+        run: yarn nx affected --parallel=1 --base=$base --target=version
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
